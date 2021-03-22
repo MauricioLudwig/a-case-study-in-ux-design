@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { components } from "../";
 
@@ -7,8 +8,10 @@ export const Home = () => (
   <main>
     <h1>A case study in UX design</h1>
     <Grid>
-      {components.map(({ path }) => (
-        <div key={path}>{path}</div>
+      {components.map(({ name, path }) => (
+        <Link key={path} to={path}>
+          {name}
+        </Link>
       ))}
     </Grid>
   </main>
