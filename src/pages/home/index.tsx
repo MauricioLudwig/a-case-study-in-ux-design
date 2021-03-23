@@ -9,7 +9,7 @@ export const Home = () => (
     <h1>A case study in UX design</h1>
     <Grid>
       {components.map(({ name, path }) => (
-        <Link key={path} to={path}>
+        <Link key={path} to={`/${path}`}>
           {name}
         </Link>
       ))}

@@ -13,10 +13,16 @@ export const AppRouter: React.FC = () => (
   <Router>
     <Switch>
       <Route path="/" component={Home} exact />
-      {components.map(({ name, path, component }) => (
-        <Page key={path} title={name}>
-          <Route path={path} component={component} />
-        </Page>
+      {components.map(({ name, path, component: Component }) => (
+        <Route
+          key={path}
+          path={`/${path}`}
+          component={(props: any) => (
+            <Page title={name}>
+              <Component {...props} />
+            </Page>
+          )}
+        />
       ))}
       <Redirect to="/" />
     </Switch>
