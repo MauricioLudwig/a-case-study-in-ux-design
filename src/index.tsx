@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
+import "normalize.css";
+import "antd/dist/antd.css";
 import { AppRouter } from "./router";
 
 ReactDOM.render(

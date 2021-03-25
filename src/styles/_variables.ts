@@ -4,3 +4,7 @@ export const breakpoints: Readonly<Record<string, string>> = {
   md: "992px",
   lg: "1200px",
 };
+
+export const colors: Readonly<Record<string, string>> = {
+  white: "#fff",
+};
